@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj": {}
+    "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab1\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj": {
+    "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab1\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj",
+        "projectUniqueName": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab1\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj",
         "projectName": "CoolCarClub",
-        "projectPath": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj",
+        "projectPath": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab1\\CoolCarClub\\CoolCarClub\\CoolCarClub.csproj",
         "packagesPath": "C:\\Users\\WIcky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\CoolCarClub\\CoolCarClub\\obj\\",
+        "outputPath": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab1\\CoolCarClub\\CoolCarClub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
