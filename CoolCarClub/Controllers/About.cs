@@ -8,5 +8,15 @@ namespace CoolCarClub.Controllers
         {
             return View();
         }
+
+        public IActionResult Links()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View();
+        }
     }
 }
