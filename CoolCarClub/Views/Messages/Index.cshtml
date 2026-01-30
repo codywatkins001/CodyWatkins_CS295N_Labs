@@ -1,11 +1,36 @@
 ﻿@*Created by Cody Watkins*@
+@model List<Message>
 
 @{
     ViewData["Title"] = "Messages";
 }
 <div class="text-center">
-    <h1>Messages</h1>
-    <p>Here Is Where You Will See All Your Messages</p>
+    <h2>Messages</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Subject</th>
+                <th>Priority</th>
+                <th>Date Sent</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var msg in Model)
+            {
+                <tr>
+                    <td>@msg.Sender</td>
+                    <td>@msg.Recipient</td>
+                    <td>@msg.Subject</td>
+                    <td>@msg.Priority</td>
+                    <td>@msg.DateSent.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
     @*Links to connected pages*@
     <a href="Message">Messages</a>
 </div>
