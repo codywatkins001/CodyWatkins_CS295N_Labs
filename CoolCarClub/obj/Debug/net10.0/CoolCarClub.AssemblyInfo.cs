@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2360e68ebc0d97e7538698f21a5a5d86be4d12bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+904fd5a629e2c2424252057133e019f0e4700cb4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

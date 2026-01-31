@@ -6,11 +6,9 @@ namespace CoolCarClub.Controllers
 {
     public class MessagesController : Controller
     {
-
-        public IActionResult Index()
+        // Fake database (persists while app is running)
+        private static List<Message> _messages = new List<Message>
         {
-            var messages = new List<Message>
-            {
             new Message
             {
                 MessageId = 1,
@@ -35,11 +33,29 @@ namespace CoolCarClub.Controllers
             }
         };
 
-            return View(messages);
+        // Show all messages
+        public IActionResult Index()
+        {
+            return View(_messages);
         }
-        public IActionResult Message()
+
+        // SHOW the send message form
+        public IActionResult Create()
         {
             return View();
+        }
+
+        // HANDLE the form submission
+        [HttpPost]
+        public IActionResult Create(Message message)
+        {
+            message.MessageId = _messages.Count + 1;
+            message.DateSent = DateTime.Now;
+            message.IsRead = false;
+
+            _messages.Add(message);
+
+            return RedirectToAction("Index");
         }
     }
 }
