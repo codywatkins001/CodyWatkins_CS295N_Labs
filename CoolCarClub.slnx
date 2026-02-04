@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="CoolCarClub.Tests/CoolCarClub.Tests.csproj" Id="55787b01-368f-48ca-88ea-4f087831089f" />
   <Project Path="CoolCarClub/CoolCarClub.csproj" />
 </Solution>
