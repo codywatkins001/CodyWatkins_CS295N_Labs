@@ -1,0 +1,26 @@
+﻿@model QuizViewModel
+
+<h2>Quiz</h2>
+
+<form method="post">
+    @for (int i = 0; i < Model.Questions.Count; i++)
+    {
+        <div>
+            <p>@Model.Questions[i]</p>
+
+            <input type="text"
+                   name="UserAnswers[@i]"
+                   value="@(Model.UserAnswers.Count > i ? Model.UserAnswers[i] : "")" />
+
+            @if (Model.Results.Count > i)
+            {
+                <strong>
+                    @(Model.Results[i] ? "Correct" : "Wrong")
+                </strong>
+            }
+        </div>
+        <hr />
+    }
+
+    <button type="submit">Submit</button>
+</form>
