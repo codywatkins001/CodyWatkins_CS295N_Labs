@@ -1,4 +1,5 @@
 ﻿// Created by Cody Watkins
+using CoolCarClub.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoolCarClub.Controllers
@@ -10,9 +11,21 @@ namespace CoolCarClub.Controllers
             return View();
         }
 
-        public IActionResult Message()
+        public IActionResult ForumPost()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult ForumPost(Message model)
+        {
+            model.Date = DateOnly.FromDateTime(DateTime.Now);
+            return View("Message", model);
+        }
+
+        public IActionResult Message(Message model)
+        {
+            return View(model);
         }
     }
 }
