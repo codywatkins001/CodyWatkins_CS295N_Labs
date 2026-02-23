@@ -2,7 +2,7 @@
 
 namespace CoolCarClub.Controllers
 {
-    public class About : Controller
+    public class AboutController : Controller
     {
         public IActionResult Index()
         {
