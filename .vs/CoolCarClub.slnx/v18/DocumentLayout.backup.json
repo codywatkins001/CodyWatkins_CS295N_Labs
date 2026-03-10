@@ -3,19 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WIcky\\AppData\\Roaming\\Microsoft\\UserSecrets\\994e6bea-0c8e-476e-a226-0a679b25795e\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\controllers\\messagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\views\\messages\\forumpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\views\\messages\\forumpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\views\\messages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\views\\messages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\views\\messages\\message.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\views\\messages\\message.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|c:\\users\\wicky\\onedrive\\desktop\\cs295n\\lab4\\codywatkins_cs295n_labs\\coolcarclub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{209E3733-83E7-1914-976B-93D7F4CF0A30}|CoolCarClub\\CoolCarClub.csproj|solutionrelative:coolcarclub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,34 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\WIcky\\AppData\\Roaming\\Microsoft\\UserSecrets\\994e6bea-0c8e-476e-a226-0a679b25795e\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\994e6bea-0c8e-476e-a226-0a679b25795e\\secrets.json",
-              "ToolTip": "C:\\Users\\WIcky\\AppData\\Roaming\\Microsoft\\UserSecrets\\994e6bea-0c8e-476e-a226-0a679b25795e\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\994e6bea-0c8e-476e-a226-0a679b25795e\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-08T05:27:07.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "CoolCarClub\\appsettings.Production.json",
-              "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\appsettings.Production.json",
-              "RelativeToolTip": "CoolCarClub\\appsettings.Production.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-07T04:04:26.278Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -60,12 +43,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ForumPost.cshtml",
+              "DocumentMoniker": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Views\\Messages\\ForumPost.cshtml",
+              "RelativeDocumentMoniker": "CoolCarClub\\Views\\Messages\\ForumPost.cshtml",
+              "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Views\\Messages\\ForumPost.cshtml",
+              "RelativeToolTip": "CoolCarClub\\Views\\Messages\\ForumPost.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T20:50:10.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Views\\Messages\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoolCarClub\\Views\\Messages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Views\\Messages\\Index.cshtml",
+              "RelativeToolTip": "CoolCarClub\\Views\\Messages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T01:36:45.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Program.cs",
+              "RelativeDocumentMoniker": "CoolCarClub\\Program.cs",
+              "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Program.cs",
+              "RelativeToolTip": "CoolCarClub\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T00:51:51.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "CoolCarClub\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Data\\SeedData.cs",
+              "RelativeToolTip": "CoolCarClub\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T00:33:38.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MessagesController.cs",
               "DocumentMoniker": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Controllers\\MessagesController.cs",
               "RelativeDocumentMoniker": "CoolCarClub\\Controllers\\MessagesController.cs",
               "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Controllers\\MessagesController.cs",
               "RelativeToolTip": "CoolCarClub\\Controllers\\MessagesController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwCAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-05T22:04:09.144Z",
               "EditorCaption": ""
@@ -78,7 +113,7 @@
               "RelativeDocumentMoniker": "CoolCarClub\\Views\\Messages\\Message.cshtml",
               "ToolTip": "C:\\Users\\WIcky\\OneDrive\\Desktop\\CS295N\\Lab4\\CodyWatkins_CS295N_Labs\\CoolCarClub\\Views\\Messages\\Message.cshtml",
               "RelativeToolTip": "CoolCarClub\\Views\\Messages\\Message.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-05T21:54:13.732Z",
               "EditorCaption": ""

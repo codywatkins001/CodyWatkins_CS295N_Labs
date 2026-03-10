@@ -1,5 +1,6 @@
 using CoolCarClub.Data;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,5 +36,11 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider
+                         .GetRequiredService<CoolCarClubDbContext>();
+    SeedData.Seed(dbContext);
+}
 
 app.Run();

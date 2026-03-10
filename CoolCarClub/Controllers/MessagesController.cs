@@ -30,16 +30,29 @@ namespace CoolCarClub.Controllers
             model.Date = DateOnly.FromDateTime(DateTime.Now);
             context.Messages.Add(model);
             context.SaveChanges();
-            return View("Message", model);
+            // After creating a single Message, redirect to the list view so the view receives List<Message>
+            return RedirectToAction("Message");
         }
 
-        public IActionResult Message(Message model)
+        public IActionResult Message()
         {
             var messages = context.Messages
                 .Include(r => r.To)
                 .Include(r => r.From)
                 .ToList();
             return View(messages);
+        }
+        [HttpPost]
+        public IActionResult Filter(string to, string date)
+        {
+            var messages = context.Messages
+                .Include(r => r.To)
+                .Include(r => r.From)
+                .ToList()
+                .Where(r => to == null || r.To.Name == to)
+                .Where(r => date == null || r.Date == DateOnly.Parse(date))
+                .ToList();
+            return View("Message", messages);
         }
     }
 }

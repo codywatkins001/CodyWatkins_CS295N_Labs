@@ -19,23 +19,23 @@ namespace CoolCarClub.Data
 
                 Message message = new Message
                 {
-                    BookTitle = "Prince of Foxes",
-                    AuthorName = "Samuel Shellabarger",
-                    ReviewText = "Great book, a must read!",
-                    Reviewer = reviewer1,
-                    ReviewDate = DateTime.Parse("11/1/2020")
+                    Text = "Hello, this is a message from Emma to Cody.",
+                    From = user1,
+                    To = user2,
+                    Date = DateOnly.FromDateTime(DateTime.Now)
                 };
-                context.Messages.Add(review);  // queues up a review to be added to the DB
 
-                review = new Review
+                context.Messages.Add(message);  // queues up a message to be added to the DB
+
+                message = new Message
                 {
-                    BookTitle = "Virgil Wander",
-                    AuthorName = "Lief Enger",
-                    ReviewText = "Wonderful book, written by a distant cousin of mine.",
-                    Reviewer = reviewer2,
-                    ReviewDate = DateTime.Parse("11/30/2020")
+                    Text = "Hi Emma, this is Cody. Nice to hear from you!",
+                    From = user2,
+                    To = user1,
+                    Date = DateOnly.FromDateTime(DateTime.Now)
                 };
-                context.Messages.Add(review);
+                
+                context.Messages.Add(message);
 
                 context.SaveChanges(); // stores all the Messages in the DB
             }
