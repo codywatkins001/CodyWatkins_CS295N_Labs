@@ -1,31 +1,38 @@
 ﻿@*Created by Cody Watkins*@
-@model Message
+@model List<Message>
 @{
     ViewData["Title"] = "Messages";
 }
 
 <h1>Messages</h1>
-<a href="ForumPost">Enter a new post</a>
+<a href="ForumPost">Send a Message</a>
 
-<h2>Forum Post</h2>
-@if (Model?.To != null && Model?.From != null)
+<h2>Your Messages</h2>
+@if (Model == null || Model.Count == 0)
 {
-    <table>
-        <tr>
-            <td style="width:5em;">To:  </td><td>@Model.To.Name</td>
-        </tr>
-        <tr>
-            <td style="width:5em;">From:  </td><td>@Model.From.Name</td>
-        </tr>
-        <tr>
-            <td style="width:5em;">Message:  </td><td>@Model.Text</td>
-        </tr>
-        <tr>
-            <td style="width:5em;">Date:  </td><td>@Model.Date</td>
-        </tr>
-    </table>
+    <p class="text-center">No messages yet.</p>
 }
 else
 {
-    <p>No messages yet.</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>To: </th>
+                <th>From: </th>
+                <th>Message: </th>
+                <th>Date: </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model)
+            {
+                <tr>
+                    <td>@message.To?.Name</td>
+                    <td>@message.From?.Name</td>
+                    <td>@(message.Text ?? "")</td>
+                    <td>@message.Date.ToString("d")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }

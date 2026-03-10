@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("994e6bea-0c8e-476e-a226-0a679b25795e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e70f57a8cad13822bdc9ded21b1410c8fceaeb7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c91f1683aea80d13041149637ee7d815e63952d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

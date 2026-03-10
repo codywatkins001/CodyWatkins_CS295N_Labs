@@ -1,4 +1,6 @@
 ﻿//Created by Cody Watkins
+using Microsoft.AspNetCore.Mvc;
+
 namespace CoolCarClub.Models
 {
     public class Message
