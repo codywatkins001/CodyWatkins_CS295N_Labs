@@ -27,11 +27,18 @@ namespace CoolCarClub.Controllers
         [HttpPost]
         public IActionResult ForumPost(Message model)
         {
-            model.Date = DateOnly.FromDateTime(DateTime.Now);
-            context.Messages.Add(model);
-            context.SaveChanges();
-            // After creating a single Message, redirect to the list view so the view receives List<Message>
-            return RedirectToAction("Message");
+            //check if the submitted model is valid
+            if (ModelState.IsValid)
+            {
+                //set the date
+                model.Date = DateOnly.FromDateTime(DateTime.Now);
+                //add to DB
+                context.Messages.Add(model);
+                context.SaveChanges();
+                return RedirectToAction("Message");
+            }
+            //if validation failed, return the same view so errors show
+            return View(model);
         }
 
         public IActionResult Message()
