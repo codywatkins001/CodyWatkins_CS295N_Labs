@@ -117,5 +117,34 @@ namespace RecipeManager.Controllers
 
             return View();
         }
+        public IActionResult Delete(int id)
+        {
+            var recipe = context.Recipes
+                .Include(r => r.Category)
+                .FirstOrDefault(r => r.RecipeId == id);
+
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+
+            return View(recipe);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Recipe model)
+        {
+            var recipe = context.Recipes.Find(model.RecipeId);
+
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+
+            context.Recipes.Remove(recipe);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
