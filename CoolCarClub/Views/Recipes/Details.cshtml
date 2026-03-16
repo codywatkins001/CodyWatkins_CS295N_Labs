@@ -1,0 +1,72 @@
+﻿@model RecipeManager.Models.Recipe
+
+@{
+    ViewData["Title"] = "Recipe Details";
+}
+
+<h1>Recipe Details</h1>
+
+<table class="table">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td><strong>Description</strong></td>
+        <td>@Model.Description</td>
+    </tr>
+    <tr>
+        <td><strong>Instructions</strong></td>
+        <td>@Model.Instructions</td>
+    </tr>
+    <tr>
+        <td><strong>Prep Time</strong></td>
+        <td>@Model.PrepTimeMinutes minutes</td>
+    </tr>
+    <tr>
+        <td><strong>Cook Time</strong></td>
+        <td>@Model.CookTimeMinutes minutes</td>
+    </tr>
+    <tr>
+        <td><strong>Servings</strong></td>
+        <td>@Model.Servings</td>
+    </tr>
+    <tr>
+        <td><strong>Category</strong></td>
+        <td>@Model.Category?.Name</td>
+    </tr>
+</table>
+
+<h3>Ingredients</h3>
+
+@if (Model.RecipeIngredients == null || Model.RecipeIngredients.Count == 0)
+{
+    <p>No ingredients listed.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ingredient</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.RecipeIngredients)
+            {
+                <tr>
+                    <td>@item.Ingredient?.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Unit</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.RecipeId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</p>

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Serving Calculator";
+}
+
+<h1>Serving Calculator</h1>
+
+<form asp-action="Calculator" method="post">
+    <div class="mb-3">
+        <label class="form-label">Ingredient Quantity</label>
+        <input type="number" step="0.01" name="quantity" class="form-control" value="@ViewBag.Quantity" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Original Servings</label>
+        <input type="number" name="originalServings" class="form-control" value="@ViewBag.OriginalServings" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">New Servings</label>
+        <input type="number" name="newServings" class="form-control" value="@ViewBag.NewServings" />
+    </div>
+
+    <input type="submit" value="Calculate" class="btn btn-primary" />
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <div class="mt-4">
+        <h3>Adjusted Quantity: @ViewBag.Result</h3>
+    </div>
+}

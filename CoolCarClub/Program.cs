@@ -1,18 +1,23 @@
-using CoolCarClub.Data;
+using RecipeManager.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 var baseConnectionString = builder.Configuration.GetConnectionString("MySqlConnection");
 var user = builder.Configuration["DbUser"];
 var password = builder.Configuration["DbPassword"];
 var connectionString = $"{baseConnectionString}userid={user};password={password};";
 
-builder.Services.AddDbContext<CoolCarClubDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddDbContext<RecipeManagerDbContext>(options =>
+    options.UseMySQL(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+    options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<RecipeManagerDbContext>();
 
 var app = builder.Build();
 
@@ -20,13 +25,13 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
@@ -38,9 +43,8 @@ app.MapControllerRoute(
 
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider
-                         .GetRequiredService<CoolCarClubDbContext>();
-    SeedData.Seed(dbContext);
+    var dbContext = scope.ServiceProvider.GetRequiredService<RecipeManagerDbContext>();
+    SeedData.Initialize(dbContext);
 }
 
 app.Run();

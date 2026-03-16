@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("994e6bea-0c8e-476e-a226-0a679b25795e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25e53c75880f9a51f548009209c85aebec947ec9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a560bbec4ce4e933e70507afb89c307fb232064")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoolCarClub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

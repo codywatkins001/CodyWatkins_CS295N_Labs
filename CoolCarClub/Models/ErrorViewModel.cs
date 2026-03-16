@@ -1,4 +1,4 @@
-namespace CoolCarClub.Models
+namespace RecipeManager.Models
 {
     public class ErrorViewModel
     {

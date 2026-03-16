@@ -1,0 +1,55 @@
+﻿@model RecipeManager.Models.Recipe
+
+@{
+    ViewData["Title"] = "Add Recipe";
+}
+
+<h1>Add Recipe</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Instructions" class="form-label"></label>
+        <textarea asp-for="Instructions" class="form-control"></textarea>
+        <span asp-validation-for="Instructions" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PrepTimeMinutes" class="form-label"></label>
+        <input asp-for="PrepTimeMinutes" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CookTimeMinutes" class="form-label"></label>
+        <input asp-for="CookTimeMinutes" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Servings" class="form-label"></label>
+        <input asp-for="Servings" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label"></label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

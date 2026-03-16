@@ -1,8 +1,8 @@
-﻿namespace CoolCarClubTests
+﻿namespace RecipeManagerTests
 {
 
-    using CoolCarClub.Controllers;
-    using CoolCarClub.Models;
+    using RecipeManager.Controllers;
+    using RecipeManager.Models;
         public class QuizTests
         {
             [Fact]

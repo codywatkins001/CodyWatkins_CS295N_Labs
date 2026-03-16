@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoolCarClub\CoolCarClub.csproj" />
+    <ProjectReference Include="..\RecipeManager\RecipeManager.csproj" />
   </ItemGroup>
 
   <ItemGroup>
