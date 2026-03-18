@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RecipeManager.Data;
 using RecipeManager.Models;
 
 namespace RecipeManager.Controllers
 {
+    [Authorize]
     public class IngredientsController : Controller
     {
         private readonly RecipeManagerDbContext context;

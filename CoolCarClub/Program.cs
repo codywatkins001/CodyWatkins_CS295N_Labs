@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 var baseConnectionString = builder.Configuration.GetConnectionString("MySqlConnection");
 var user = builder.Configuration["DbUser"];
@@ -15,9 +16,12 @@ var connectionString = $"{baseConnectionString}userid={user};password={password}
 builder.Services.AddDbContext<RecipeManagerDbContext>(options =>
     options.UseMySQL(connectionString));
 
+builder.Services.AddDbContext<RecipeManagerContext>(options =>
+    options.UseMySQL(connectionString));
+
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-    options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<RecipeManagerDbContext>();
+    options.SignIn.RequireConfirmedAccount = false)
+    .AddEntityFrameworkStores<RecipeManagerContext>();
 
 var app = builder.Build();
 
@@ -41,10 +45,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<RecipeManagerDbContext>();
-    SeedData.Initialize(dbContext);
-}
+app.MapRazorPages();
+
+ using (var scope = app.Services.CreateScope())
+ {
+     var dbContext = scope.ServiceProvider.GetRequiredService<RecipeManagerDbContext>();
+     SeedData.Initialize(dbContext);
+ }
 
 app.Run();

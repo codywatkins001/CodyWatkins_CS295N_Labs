@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RecipeManager.Data;
@@ -6,6 +7,7 @@ using RecipeManager.Models;
 
 namespace RecipeManager.Controllers
 {
+    [Authorize]
     public class RecipesController : Controller
     {
         private RecipeManagerDbContext context;
