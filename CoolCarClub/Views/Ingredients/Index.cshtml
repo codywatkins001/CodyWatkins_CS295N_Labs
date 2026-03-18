@@ -1,0 +1,35 @@
+﻿@model List<RecipeManager.Models.Ingredient>
+
+@{
+    ViewData["Title"] = "Ingredients";
+}
+
+<h1>Ingredients</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add Ingredient</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Default Unit</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.DefaultUnit</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IngredientId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IngredientId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

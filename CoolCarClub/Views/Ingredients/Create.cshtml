@@ -1,0 +1,20 @@
+﻿@model RecipeManager.Models.Ingredient
+
+<h1>Add Ingredient</h1>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DefaultUnit" class="form-label"></label>
+        <input asp-for="DefaultUnit" class="form-control" />
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+</form>

@@ -1,0 +1,32 @@
+﻿@model RecipeManager.Models.RecipeIngredientForm
+
+@{
+    ViewData["Title"] = "Add Ingredient to Recipe";
+}
+
+<h1>Add Ingredient to Recipe</h1>
+
+<h3>@Model.RecipeName</h3>
+
+<form asp-action="AddIngredient" method="post">
+    <input type="hidden" asp-for="RecipeId" />
+    <input type="hidden" asp-for="RecipeName" />
+
+    <div class="mb-3">
+        <label asp-for="IngredientId" class="form-label">Ingredient</label>
+        <select asp-for="IngredientId" asp-items="ViewBag.Ingredients" class="form-control"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Quantity" class="form-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Unit" class="form-label"></label>
+        <input asp-for="Unit" class="form-control" />
+    </div>
+
+    <input type="submit" value="Add Ingredient" class="btn btn-primary" />
+    <a asp-action="Details" asp-route-id="@Model.RecipeId" class="btn btn-secondary">Cancel</a>
+</form>

@@ -51,6 +51,7 @@ else
                 <th>Ingredient</th>
                 <th>Quantity</th>
                 <th>Unit</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -60,6 +61,14 @@ else
                     <td>@item.Ingredient?.Name</td>
                     <td>@item.Quantity</td>
                     <td>@item.Unit</td>
+                    <td>
+                        <a asp-action="DeleteRecipeIngredient"
+                           asp-route-id="@item.RecipeIngredientId"
+                           asp-route-recipeId="@Model.RecipeId"
+                           class="btn btn-danger btn-sm">
+                            Delete
+                        </a>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -67,6 +76,7 @@ else
 }
 
 <p>
+    <a asp-action="AddIngredient" asp-route-id="@Model.RecipeId" class="btn btn-success">Add Ingredient</a>
     <a asp-action="Edit" asp-route-id="@Model.RecipeId" class="btn btn-primary">Edit</a>
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </p>

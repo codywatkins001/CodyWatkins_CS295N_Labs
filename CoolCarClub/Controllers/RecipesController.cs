@@ -146,5 +146,71 @@ namespace RecipeManager.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult AddIngredient(int id)
+        {
+            var recipe = context.Recipes.FirstOrDefault(r => r.RecipeId == id);
+
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+
+            var model = new RecipeIngredientForm
+            {
+                RecipeId = recipe.RecipeId,
+                RecipeName = recipe.Name
+            };
+
+            ViewBag.Ingredients = new SelectList(context.Ingredients.ToList(), "IngredientId", "Name");
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddIngredient(RecipeIngredientForm model)
+        {
+            var recipe = context.Recipes.FirstOrDefault(r => r.RecipeId == model.RecipeId);
+
+            if (recipe == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                RecipeIngredient recipeIngredient = new RecipeIngredient
+                {
+                    RecipeId = model.RecipeId,
+                    IngredientId = model.IngredientId,
+                    Quantity = model.Quantity,
+                    Unit = model.Unit
+                };
+
+                context.RecipeIngredients.Add(recipeIngredient);
+                context.SaveChanges();
+
+                return RedirectToAction("Details", new { id = model.RecipeId });
+            }
+
+            ViewBag.Ingredients = new SelectList(context.Ingredients.ToList(), "IngredientId", "Name");
+            return View(model);
+        }
+
+        public IActionResult DeleteRecipeIngredient(int id, int recipeId)
+        {
+            var recipeIngredient = context.RecipeIngredients.Find(id);
+
+            if (recipeIngredient == null)
+            {
+                return NotFound();
+            }
+
+            context.RecipeIngredients.Remove(recipeIngredient);
+            context.SaveChanges();
+
+            return RedirectToAction("Details", new { id = recipeId });
+        }
     }
 }
