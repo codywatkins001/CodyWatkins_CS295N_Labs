@@ -1,0 +1,31 @@
+﻿@*Created by Cody Watkins*@
+@model Message
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<h1>Messages</h1>
+<a href="ForumPost">Enter a new post</a>
+
+<h2>Forum Post</h2>
+@if (Model?.To != null && Model?.From != null)
+{
+    <table>
+        <tr>
+            <td style="width:5em;">To:  </td><td>@Model.To.Name</td>
+        </tr>
+        <tr>
+            <td style="width:5em;">From:  </td><td>@Model.From.Name</td>
+        </tr>
+        <tr>
+            <td style="width:5em;">Message:  </td><td>@Model.Text</td>
+        </tr>
+        <tr>
+            <td style="width:5em;">Date:  </td><td>@Model.Date</td>
+        </tr>
+    </table>
+}
+else
+{
+    <p>No messages yet.</p>
+}
